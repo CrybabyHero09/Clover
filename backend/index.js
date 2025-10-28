@@ -30,7 +30,9 @@ store.io = io(server);
 init();
 mediasoup.init();
 
-const listen = () => server.listen(Config.port, () => console.log(`Server listening on port ${Config.port}`.green));
+const PORT = process.env.PORT || Config.port || 5000;
+const listen = () => server.listen(PORT, () => console.log(`Server listening on port ${PORT}`.green));
+
 
 server.on('error', (e) => {
   if (e.code === 'EADDRINUSE') {
