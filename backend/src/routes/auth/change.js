@@ -4,7 +4,7 @@ const Email = require('../../models/Email');
 const User = require('../../models/User');
 const config = require('../../../config');
 const moment = require('moment');
-const argon2 = require('argon2');
+const bcrypt = require('bcryptjs');
 
 router.post('*', async (req, res) => {
   let { code, email, password } = req.fields;

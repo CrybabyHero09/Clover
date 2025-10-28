@@ -1,4 +1,4 @@
-const argon2 = require('argon2');
+const bcrypt = require('bcryptjs');
 const isEmpty = require('../../utils/isEmpty');
 const User = require('../../models/User');
 
