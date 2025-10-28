@@ -8,7 +8,8 @@
     "start": "node index",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
-    "postinstall": "npm rebuild argon2"
+    "postinstall": "npm rebuild argon2",
+    "preinstall": "npm rebuild mediasoup"
   },
   "repository": {
     "type": "git",
